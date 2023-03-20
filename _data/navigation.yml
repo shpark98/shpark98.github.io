@@ -16,6 +16,10 @@ docs:
         url : /tags/
       - title: "- Linux"
         url : /tags/
+      - title: "- Python"
+        url : /categories/#python/
+      - title: "- C/C++"
+        url : /tags/            
       - title: "- ROS"
         url : /tags/        
       - title: "- Project"
