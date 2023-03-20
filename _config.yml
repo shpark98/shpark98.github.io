@@ -109,7 +109,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "**ACE**"
   location         : "Seoul, Korea"
-  email            : "pshpsh980@naver.com"
+  email            : false
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
