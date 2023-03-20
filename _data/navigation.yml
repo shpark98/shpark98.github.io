@@ -10,12 +10,16 @@ main:
 docs:
   - title: "Category"
     children:
-      - title: "Coding"
-        url : /categories/#coding/
-      - title: "Tag"
+      - title: "- Algorithm"
         url : /tags/
-
-
+      - title: "- Coding test"
+        url : /tags/
+      - title: "- Linux"
+        url : /tags/
+      - title: "- ROS"
+        url : /tags/        
+      - title: "- Project"
+        url : /tags/      
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
