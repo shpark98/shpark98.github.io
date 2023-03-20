@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : " "
+title                    : "ACE"
 title_separator          : "|"
 subtitle                 : "Ambitious, Creative, Empathetic"
 name                     : "SH Park"
-description              : "ACE"
+description              : ""
 url                      : "https://shpark98.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -107,7 +107,7 @@ analytics:
 author:
   name             : "SH Park"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "**ACE**"
+  bio              : ""
   location         : "Seoul, Korea"
   email            : false
   links:
