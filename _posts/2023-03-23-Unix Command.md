@@ -1,11 +1,19 @@
 ---
 
 layout: single
+
 title: "[2023-03-21] Unix Command"
+
 categories: Autonomous-Driving-Devcourse-TIL
+
 tags: Linux
+
 toc: true
+
+toc_sticky: true
+
 author_profile: false
+
 sidebar :
     nav : "docs"
 
