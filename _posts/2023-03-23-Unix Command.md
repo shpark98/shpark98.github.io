@@ -29,7 +29,7 @@ sidebar :
 
 ## Command Completion
 
-![image-20230323144043718](C:\Users\wendy\AppData\Roaming\Typora\typora-user-images\image-20230323144043718.png)
+![image](https://user-images.githubusercontent.com/116723552/227124929-7d8b8799-01a4-4cc8-a268-f2b37c8dd9f9.png)
 
 - Auto-Completion
 - `Tab` 키를 사용해서 자동완성
@@ -203,9 +203,9 @@ Python
 
 ## Linux Obsolete(구식) Commands 
 
-![image-20230323151635655](C:\Users\wendy\AppData\Roaming\Typora\typora-user-images\image-20230323151635655.png)
+![image](https://user-images.githubusercontent.com/116723552/227124756-80619e49-b0c4-48d2-90fb-cd1db0bbea7e.png)
 
-![image-20230323151712273](C:\Users\wendy\AppData\Roaming\Typora\typora-user-images\image-20230323151712273.png)
+![image](https://user-images.githubusercontent.com/116723552/227124476-c3b66307-c195-478a-9d89-651405af00e8.png)
 
 
 
