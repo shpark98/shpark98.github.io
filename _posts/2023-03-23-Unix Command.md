@@ -4,7 +4,7 @@ layout: single
 
 title: "[2023-03-21] Unix Command"
 
-categories: Autonomous-Driving-Devcourse-TIL
+categories: Devcourse-TIL
 
 tags: Linux
 
@@ -16,16 +16,9 @@ author_profile: false
 
 sidebar :
     nav : "docs"
-
 ---
 
-# Unix Command
-
-2023-03-21
-
-
-
-## Linux(Unix) 필수 명령어
+### Linux(Unix) 필수 명령어
 
 - CLI(Command Line Interface) 명령어
 - 관리자용 명령어를 제외한 필수 명령어는 수십여개 정도
@@ -35,7 +28,7 @@ sidebar :
 
 
 
-## Command Completion
+### Command Completion
 
 ![image](https://user-images.githubusercontent.com/116723552/227124929-7d8b8799-01a4-4cc8-a268-f2b37c8dd9f9.png)
 
@@ -44,7 +37,7 @@ sidebar :
 
 
 
-## i18n
+### i18n
 
 - **i**<u>nternationalizatio</u>**n**의 축약형
 
@@ -56,59 +49,59 @@ sidebar :
 
     
 
-## Linux Basic Commands
+### Linux Basic Commands
 
-매뉴얼 
+#### 매뉴얼 
 
 - **man**
 
-파일 관련(path) 
+#### 파일 관련(path) 
 
 - **pwd**, **cd**, pushd/popd 
 
-파일 관련(file data / meta-data) 
+#### 파일 관련(file data / meta-data) 
 
 - 조회 : **ls**, **file**, **stat**, tree, which, **find**, locate
 - 데이터 변경 : **cp**, **mv**, **rm**, **mkdir**, **rmdir**, **ln**, readlink
 - 메타 변경 : **chmod**, **chown**, chrgp, chattr/lsattr
 
-파일 묶음(archive)
+#### 파일 묶음(archive)
 
 - **tar**, cpio
 
-압축(compress)
+#### 압축(compress)
 
 - **gzip**, bzip2, xz, lz4, zstd
 
-Text 관련
+#### Text 관련
 
 - Editor : **vim(vi)**, nano, emacs
 - Filter : **cat(tac)**, **head**, **tail**, **less**, more, **sort**, unique
 - Regex : **grep**, **sed**, **awk**
 
-Job Control 
+#### Job Control 
 
 - **jobs**, **fg**, **bg**, disown
 
-Process Control
+#### Process Control
 
 - **kill**, **pkill**, **pgrep**, killall
 - tracing : **strace**, pmap
 
-Networking
+#### Networking
 
 - nc, curl, wget
 - w
 
-Disk
+#### Disk
 
 - df(disk free), du(disk usage)
 
   
 
-## Linux Admin Commands
+### Linux Admin Commands
 
-System
+#### System
 
 - uptime, **free**, smem
 - process summary : **top**, htop, atop, sar, saidar
@@ -116,12 +109,12 @@ System
 - stat : **vmstat**, iostat, mpstat, **pidstat**, statgrab, dstat
 - hardware : **lshw**, lspci, lsusb
 
-Package
+#### Package
 
 - RedHat : rpm, **yum**, dnf
 - Debian : dpkg, apt-get/apt-cache/apt-file, **apt**
 
-Network 
+#### Network 
 
 - status : **ss**
 - config : **nmcli**, nmtui, ip, ipconfig/route, iw/iwconfig
@@ -129,21 +122,21 @@ Network
 - ssh, sftp, scp, ssh-copy-id
 - packet : tcpdump, wireshark, tshark
 
-Files 
+#### Files 
 
 - open files : lsof, fuser
 
-Kernel
+#### Kernel
 
 - Kernel Parameter : sysctl
 - Kernel Module : lsmod, modprobe, rmmod
 
-Firewall
+#### Firewall
 
 - iptables,ip6tables
 - firewall-cmd,ufw
 
-Disks
+#### Disks
 
 - **fdisk**, cfdisk, sfdisk, fixparts, flock
 - **parted**, gdisk, cgdisk, sgdisk
@@ -153,55 +146,55 @@ Disks
 - lvs, vgs, pvs
 - **udisksctl**
 
-Security
+#### Security
 
 - **ulimit**
 - visudo
 - sestatus, getsebool / setsebool, getenforce / setenforce
 - abrt
 
-User 
+#### User 
 
 - **useradd**, **groupadd**, **usermod**, groupdel, chgrp, newgrp
 - **passwd**, **chpasswd**, gpasswd
 
-Service 
+#### Service 
 
 - init, service, chkconfig, ntsysv, update-rc
 - **systemctl**
 
-Performance
+#### Performance
 
 - tuned-adm
 - perf
 - pcp
 
-Locale 
+#### Locale 
 
 - locale, localectl
 
-Alternatives
+#### Alternatives
 
 - update-alternatives
 
   
 
-## Linux Dev. Commands
+### Linux Dev. Commands
 
-Compiler
+#### Compiler
 
 - gcc, g++, clang
 
-Debugging, Tracing
+#### Debugging, Tracing
 
 - gdb, strace, coredumpctl
 
-Tools
+#### Tools
 
 - make, maven, graddle
 - **git**
 
-Python
+#### Python
 
 - python2, pip
 
@@ -209,7 +202,7 @@ Python
 
   
 
-## Linux Obsolete(구식) Commands 
+### Linux Obsolete(구식) Commands 
 
 ![image](https://user-images.githubusercontent.com/116723552/227124756-80619e49-b0c4-48d2-90fb-cd1db0bbea7e.png)
 

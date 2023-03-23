@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : " "
+title                    : "Ambitious, Creative, Empathetic"
 title_separator          : "|"
-subtitle                 : "Ambitious, Creative, Empathetic"
+subtitle                 : 
 name                     : "SH Park"
 description              : ""
 url                      : "https://shpark98.github.io"
@@ -28,7 +28,7 @@ teaser                   : # path of fallback teaser image, e.g. "/assets/images
 logo                     : "/assets/images/ACE.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 future                   : true
-breadcrumbs              : true # true, false (default)
+breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
 comments:
   provider               : false # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"

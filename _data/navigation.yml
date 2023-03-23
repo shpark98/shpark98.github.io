@@ -8,22 +8,28 @@ main:
     url: /search/    
 
 docs:
-  - title: "Category"
+  - title: "Programming Language"
     children:
-      - title: "- Algorithm"
-        url : /tags/
-      - title: "- Coding test"
-        url : /tags/
-      - title: "- Linux"
-        url : /tags/
+      - title: "- C"
+        url : /categories/#c
+      - title: "- C++"
+        url : /categories/#cpp
       - title: "- Python"
-        url : /categories/#python/
-      - title: "- C/C++"
-        url : /tags/            
+        url : /categories/#python/               
+      - title: "- Coding test"
+        url : /categories/#codingtest
+      - title: "- Algorithm"
+        url : /categories/#algorithm/
+  - title: "Autonomous Driving/Flight"
+    children:
+      - title: "- Linux"
+        url : /categories/#linux
       - title: "- ROS"
-        url : /tags/        
+        url : /categories/#ros       
       - title: "- Project"
-        url : /tags/      
+        url : /categories/#project
+      - title: " - DevCourse TIL"
+        url : /categories/#Devcourse-TIL
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
