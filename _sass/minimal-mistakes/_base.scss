@@ -111,7 +111,7 @@ blockquote {
   padding-left: 1em;
   padding-right: 1em;
   font-style: italic;
-  border-left: 0.25em solid $primary-color;
+  border-left: 0.25em solid #b3b3b3;
 
   cite {
     font-style: italic;
@@ -128,17 +128,18 @@ blockquote {
 a {
 
   text-decoration: none;  
+  color: #000;
 
   &:focus {
     @extend %tab-focus;
   }
 
   &:visited {
-    color: $link-color-visited;
+    color: #000;
   }
 
   &:hover {
-    color: $link-color-hover;
+    color: #5f5f5f;
     outline: 0;
   }
 }
