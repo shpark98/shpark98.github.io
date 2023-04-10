@@ -15,21 +15,24 @@ docs:
       - title: "- C++"
         url : /categories/#cpp
       - title: "- Python"
-        url : /categories/#python/               
+        url : /categories/#Python/               
       - title: "- Coding test"
-        url : /categories/#codingtest
+        url : /categories/#Codingtest
       - title: "- Algorithm"
         url : /categories/#algorithm/
   - title: "Autonomous Driving/Flight"
     children:
       - title: "- Linux"
-        url : /categories/#linux
+        url : /categories/#Linux
       - title: "- ROS"
-        url : /categories/#ros       
+        url : /categories/#ROS       
       - title: "- Project"
-        url : /categories/#project
+        url : /categories/#Project
+      - title: " - Mini-Project"
+        url : /categories/#Mini-Project
       - title: " - DevCourse TIL"
         url : /categories/#Devcourse-TIL
+      
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
