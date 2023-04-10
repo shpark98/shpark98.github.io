@@ -19,19 +19,24 @@ docs:
       - title: "- Coding test"
         url : /categories/#Codingtest
       - title: "- Algorithm"
-        url : /categories/#algorithm/
+        url : /categories/#Algorithm/
+      - title: "- Git"
+        url : /categories/#Git/
   - title: "Autonomous Driving/Flight"
     children:
+      - title: " - DevCourse TIL"
+        url : /categories/#Devcourse-TIL
       - title: "- Linux"
         url : /categories/#Linux
       - title: "- ROS"
-        url : /categories/#ROS       
+        url : /categories/#ROS
+      - title: "- Computer Vision"
+        url : /categories/#CV
+      - title: "- Mini-Project"    
+        url : /categories/#Mini-Project      
       - title: "- Project"
         url : /categories/#Project
-      - title: " - Mini-Project"
-        url : /categories/#Mini-Project
-      - title: " - DevCourse TIL"
-        url : /categories/#Devcourse-TIL
+
       
 
   # - title: "About"
