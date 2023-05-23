@@ -1,0 +1,23 @@
+---
+published: true
+
+layout: single
+
+title: "[2023-05-03] 1. OpenCV와 GPU사용"
+
+categories: [Devcourse-TIL, Linux]
+
+tags: Linux
+
+toc: true
+
+toc_label : 목차
+
+toc_sticky: true
+
+author_profile: false
+
+sidebar :
+    nav : "docs"
+---
+
