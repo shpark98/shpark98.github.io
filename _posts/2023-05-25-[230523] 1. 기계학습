@@ -1,0 +1,25 @@
+---
+published: true
+
+layout: single
+
+title: "[2023-05-22] 1. 기계학습, 다층 퍼셉트론
+
+categories: [Devcourse-TIL]
+
+tags: Autonomous_Driving CV OpenCV
+
+toc: true
+
+toc_label : 목차
+
+toc_sticky: true
+
+author_profile: false
+
+sidebar :
+    nav : "docs"
+---
+
+
+

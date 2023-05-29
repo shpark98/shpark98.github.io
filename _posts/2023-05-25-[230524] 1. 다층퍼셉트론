@@ -1,0 +1,299 @@
+---
+published: true
+
+layout: single
+
+title: "[2023-05-22] 1. Docker in 우분투"
+
+categories: [Devcourse-TIL]
+
+tags: Autonomous_Driving CV OpenCV
+
+toc: true
+
+toc_label : 목차
+
+toc_sticky: true
+
+author_profile: false
+
+sidebar :
+    nav : "docs"
+---
+
+# Docker
+
+- 컨테이너화된 애플리케이션을 구축, 배포 및 실행하기 위한 오픈 소스 플랫폼
+  - 컨테이너는 소프트웨어를 패키징하고 실행하는 데 필요한 모든 것을 포함하는 독립적이고 가벼운 환경
+
+- 애플리케이션과 해당 종속성을 격리된 환경에서 실행할 수 있음
+- 개발과 배포 프로세스를 단순화하고 일관성을 유지하는 데 도움됨
+
+<img src="https://blog.hyunsub.kim/covers/docker.png" alt="image" style="zoom: 67%;" />
+
+
+
+
+
+## 우분투 환경에서 Docker 설치하기
+
+
+
+### Docker 설치 전 사전작업
+
+1. 기존에 설치되어있는 오래된 버전 삭제
+
+```
+sudo apt-get remove docker docker-engine docker.io containerd runc
+```
+
+
+
+2. apt 패키지 업데이트 및 apt가 HTTPS를 통해 저장소를 사용할 수 있도록 하는 패키지 설치
+
+```
+$ sudo apt-get update
+$ sudo apt-get install ca-certificates curl gnupg
+```
+
+
+
+3. Docker의 공식 GPG 키를 추가함
+
+```
+ $ sudo install -m 0755 -d /etc/apt/keyrings
+ $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+ $ sudo chmod a+r /etc/apt/keyrings/docker.gpg
+```
+
+
+
+4. 다음 명령을 사용하여 레포지토리를 설정함
+
+```
+$ echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+
+
+
+### Docker 설치
+
+1. 시스템의 패키지 관리자인 Advanced Pacakge Tool(APT)을 사용하여 패키지 목록 업데이트 
+
+```
+$ sudo apt-get update
+```
+
+
+
+2. Docker Engine, containerd 및 Docker Compose 설치
+
+```
+ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+
+
+### Docker 실행
+
+```
+ $ sudo docker run hello-world
+```
+
+
+
+
+
+## Docker CLI
+
+더 많은 Docker CLI : https://docs.docker.com/engine/reference/commandline/cli/
+
+
+
+### run
+
+- 새로운 컨테이너를 실행 (Name을 지정하지 않을 경우에는 임의로 생성)
+
+```
+$ docker run hello-world
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/b163c7de-986e-4786-9f61-bee52fd4e195" alt="image"  />
+
+
+
+- run --name : 컨테이너를 실행하면서 컨테이너 이름(NAMES)를 지정함
+  - 동일한 name을 가진 컨테이너를 만들 수 없음
+
+```
+$ docker run -- name hello-world_01 hello-world
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/b5316b5a-697c-4462-b75f-cb606b323e94" alt="image" style="zoom:80%;" />
+
+
+
+
+
+### ps
+
+- 기본적으로 작동중인 docker process를 출력
+
+```
+$ docker ps
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/a2a42d1a-2a87-4073-ac68-19a7719fe121" alt="image" style="zoom:80%;" />
+
+
+
+- filter 
+  - https://docs.docker.com/engine/reference/commandlines/ps/
+
+```
+$ docker ps -a -f "name=hello"
+$ docker ps -a -f "name=hello-world_[1-3]"
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/ff13e621-527e-4a34-81b8-fbb82192673a" alt="image" style="zoom:80%;" />
+
+
+
+- format 
+  - filtering 결과에서 원하는 column만 뽑아 볼 수 있음
+
+```
+$ docker ps -af "name=hel" --format "{{.ID}} {{.Image}} {{.Names}}"
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/e34e1ff2-fd5e-4123-899f-ffa80a6fe39d" alt="image" style="zoom:80%;" />
+
+
+
+
+
+### rm
+
+- 컨테이너 제거
+
+```
+$ docker rm <CONTAINER ID|NAMES>
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/2cd66f02-0a8a-401f-96cc-6781140ac0e1" alt="image" style="zoom:80%;" />
+
+
+
+
+
+### rmi
+
+- 도커의 이미지를 지움
+- 이미지를 사용하는 컨테이너가 존재할 경우 image 삭제 실패 (force option으로 강제 삭제 가능하지만, 작동하는 컨테이너가 깨지므로 추천 x)
+
+```
+$ docker rmi hello-world
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/a386fb07-8be2-4659-9748-f728ca63fe58" alt="image" style="zoom:80%;" />
+
+
+
+```
+$ docker ps -af "ancestor=hello-world" --format {{.Names}} | xargs docker rm
+$ docker rmi hello-world
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/49e84c2b-6334-46e9-bcb2-5d3515ed9036" alt="image" style="zoom:80%;" />
+
+
+
+
+
+### image
+
+- ls 
+  - 명령은 현재 시스템에 있는 도커 이미지를 나열
+
+```
+$ docker image ls
+```
+
+![image](https://github.com/shpark98/Projects/assets/116723552/73c78d29-e0a9-4b6d-a7da-74c8784e43d6)
+
+
+
+- pull
+  - Docker Hub나 다른 Docker 레지스트리에서 지정된 이미지를 로컬 시스템으로 다운로드
+  - 당장 run 목적이 아니라, 나중에 run 하거나 build 혹은 save 목적인 경우에 pull을 진행함
+
+```
+$ docker image pull nginx # $ docker pull nginx와 같음
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/0d9c4c97-b70b-430d-ac7d-6b710c60071b" alt="image" style="zoom:80%;" />
+
+
+
+- inspect
+  - Docker 이미지의 상세 정보를 확인하는데 사용됨
+  - 버전 및 여러가지 정보를 볼 수 있고 format을 이용해서 특정 정보만 확인할 수 있음
+
+```
+$ docker image inspect
+$ docker image inspect -f "{{.Config.Env}}" nginx
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/84dd121a-ca50-4c4c-97d1-002b2e6b1e9e" alt="image" style="zoom:80%;" />
+
+
+
+- save 
+  - Docker 이미지를 아카이브 파일로 저장하는 데 사용
+  - 이미지를 단일 파일로 내보낼 수 있으며, 이 파일을 나중에 다른 Docker 호스트로 복원하여 이미지를 다시 로드할 수 있습니다.
+
+```
+$ docker image save nginx > docker_nginx_1.23.4.tar
+$ file docker_nginx_1.23.4.tar
+```
+
+![image](https://github.com/shpark98/Projects/assets/116723552/e7e67ecd-245b-4c7a-b230-6ab659007283)
+
+
+
+- load
+  - 저장한 이미지 아카이브 파일을 로드하여 Docker 호스트에 이미지를 복원함
+
+```
+$ docker image load < docker_nginx_1.23.4.tar
+```
+
+![image](https://github.com/shpark98/Projects/assets/116723552/7f0300c3-a67b-4ed5-a4fa-8eedf39be826)
+
+
+
+
+
+### exec
+
+- run은 새롭게 컨테이너를 실행하는 명령이지만, exec는 기존에 존재하는 컨테이너에서 실행하는 명령
+- 터미널을 2개 실행한 뒤, 각각 아래의 cli로 docker run을 실행
+  - 동일한 Name을 가진 컨테이너를 만들 수 없으므로 2번째 터미널에서 오류가 발생
+  - Name을 바꿀 경우 잘 실행 됨
+  - 기존에 존재하는 컨테이너에서 실행하기 위해서는 exec를 사용
+  - 2개의 프로세스를 하나의 컨테이너에 넣음
+
+```
+$ docker run -it --name ubuntu_top ubuntu "top" "-d 1"
+```
+
+<img src="https://github.com/shpark98/Projects/assets/116723552/d82c6d97-7b8b-4e8b-a41b-66003ff171dd" alt="image" style="zoom:80%;" />
+
+```
+$ docker exec -it --name ubuntu_top ubuntu "top" "-d 0.2"
+```
+
+![image](https://github.com/shpark98/Projects/assets/116723552/971030db-d875-4596-8887-b59458f49961)
