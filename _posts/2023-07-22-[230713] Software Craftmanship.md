@@ -7,7 +7,7 @@ title: "[2023-07-13] 1. Software Craftmanship"
 
 categories: [Devcourse-TIL]
 
-tags: Autonomous_Driving CV
+tags: Autonomous_Driving SLAM
 
 toc: true
 
